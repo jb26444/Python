@@ -1,0 +1,9 @@
+.
+├── cmd.py
+├── compare1.py
+├── compare.py
+├── hello.py
+├── out1.txt
+└── out.txt
+
+0 directories, 6 files
