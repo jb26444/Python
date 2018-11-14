@@ -1,0 +1,150 @@
+
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#term len 0
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# !
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^C
+aaa authentication fail-message ^C
+aaa authentication login default group ACS local
+aaa authentication enable default group ACS
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa session-id common
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# !
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# sh run | sec line vty
+line vty 0 4
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ password 7 01170507035B565F
+ transport input ssh
+line vty 5 15
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ password 7 030058085E5F711C
+ transport input ssh
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# !
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# sh run | inc username
+username support privilege 15 secret 4 sLN8pi887lyYJoD7W/ayKVRQXRxHUI81WrwQwoz1.mE
+username dcw-eng privilege 15 secret 4 dmFotcer78VGJx9kq/9efmr9BR8S5SH58w8xJfBY3f2
+username shane privilege 15 password 7 151E0E18092F222A
+username solarwinds privilege 15 secret 4 igE4CJM8qLhA/7lCgu/M46V.NhjcTVbsZO3wBW25pwQ
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# !
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# sh run | inc access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2161
+ switchport mode access
+ switchport access vlan 2158
+ switchport mode access
+ switchport access vlan 2158
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ip access-list standard Secure-SNMP
+ip access-list extended Secure-VTY
+snmp-server group solarwinds v3 priv access Secure-SNMP
+ access-class Secure-VTY in vrf-also
+ access-class Secure-VTY in vrf-also
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# !
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S# 
+BMS-1F-Chmb-S-SW1-3750v2-48PS-S#

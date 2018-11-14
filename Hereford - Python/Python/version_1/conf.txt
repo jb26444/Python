@@ -1,0 +1,8 @@
+!
+sh run
+!
+sh ip route vrf *
+!
+
+
+

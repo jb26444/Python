@@ -1,0 +1,5 @@
+
+BBC-TURVEY-LOWER-SCHOOL-897VA#term len 0
+BBC-TURVEY-LOWER-SCHOOL-897VA# sh run | include aaa 
+no aaa new-model
+BBC-TURVEY-LOWER-SCHOOL-897VA#

@@ -1,0 +1,13 @@
+
+!
+sh run | inc aaa
+!
+sh run | sec line vty
+!
+sh run | inc username
+!
+sh run | inc access
+!
+
+
+

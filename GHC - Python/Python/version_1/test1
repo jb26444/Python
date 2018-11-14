@@ -1,0 +1,50 @@
+
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# !
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# snmp-server host 10.175.163.164 vrf GHC-COIN GlosU$r host 10.175.163.164 vrf GHC-COIN GlosUp         
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# !
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# snmp-server community GlosUp RO
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# !
+GHC-2G-AMBRHS-PRI(config)#
+GHC-2G-AMBRHS-PRI(config)# 
+GHC-2G-AMBRHS-PRI(config)# exit
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# !
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# wr
+Building configuration...
+[OK]
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# !
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#
+GHC-2G-AMBRHS-PRI# 
+GHC-2G-AMBRHS-PRI#

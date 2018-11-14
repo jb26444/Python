@@ -1,0 +1,207 @@
+
+BMS-GF-CS-S-Sw1-3750x-24P-S#term len 0
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# !
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^CCC
+aaa authentication fail-message ^CCC
+aaa authentication login default group ACS local
+aaa authentication enable default group ACS
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa session-id common
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# !
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# sh run | sec line vty
+line vty 0 4
+ password 7 15010E1E0725
+line vty 5 15
+ password 7 04480E140C2E
+ transport input ssh
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# !
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# sh run | inc username
+username support privilege 15 secret 4 sLN8pi887lyYJoD7W/ayKVRQXRxHUI81WrwQwoz1.mE
+username dcw-eng privilege 15 secret 4 dmFotcer78VGJx9kq/9efmr9BR8S5SH58w8xJfBY3f2
+username admin privilege 15 secret 4 MQoZyTYf1rmySAa9K8KOMLzUEeZEUSdnU6bbqirSNuw
+username solarwinds privilege 15 secret 4 j/JwlNmmp/JImp0fSy1ToLbaRDTxnluHiEZVOFvVOTM
+username updata privilege 15 password 7 000010055C0B5B56
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# !
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# sh run | inc access
+  match access-group name AUTOQOS-ACL-DEFAULT
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2153
+ switchport mode access
+ switchport access vlan 2151
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2163
+ switchport mode access
+ switchport access vlan 2158
+ switchport mode access
+ switchport access vlan 2158
+ switchport mode access
+ switchport access vlan 2158
+ switchport mode access
+ switchport access vlan 2162
+ switchport mode access
+ switchport access vlan 2162
+ switchport mode access
+ switchport access vlan 2163
+ switchport mode access
+ switchport access vlan 2163
+ switchport mode access
+ switchport access vlan 2159
+ switchport access vlan 2159
+ switchport access vlan 2159
+ switchport access vlan 2159
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2159
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2152
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2154
+ switchport mode access
+ switchport access vlan 2155
+ switchport mode access
+ switchport access vlan 2155
+ switchport mode access
+ switchport access vlan 2155
+ switchport mode access
+ switchport access vlan 2155
+ switchport mode access
+ switchport access vlan 2157
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ switchport access vlan 2159
+ switchport mode access
+ip access-list extended Secure-VTY
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# !
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S#
+BMS-GF-CS-S-Sw1-3750x-24P-S# 
+BMS-GF-CS-S-Sw1-3750x-24P-S#

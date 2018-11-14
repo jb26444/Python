@@ -1,0 +1,155 @@
+
+DCC-Stan-Rd-Sw2#term len 0
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# !
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^CCC
+aaa authentication fail-message ^CCC
+aaa authentication login default group ACS local
+aaa authentication enable default group ACS
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 2 default group tacacs+ none 
+aaa authorization commands 3 default group tacacs+ none 
+aaa authorization commands 4 default group tacacs+ none 
+aaa authorization commands 5 default group tacacs+ none 
+aaa authorization commands 6 default group tacacs+ none 
+aaa authorization commands 7 default group tacacs+ none 
+aaa authorization commands 8 default group tacacs+ none 
+aaa authorization commands 9 default group tacacs+ none 
+aaa authorization commands 10 default group tacacs+ none 
+aaa authorization commands 11 default group tacacs+ none 
+aaa authorization commands 12 default group tacacs+ none 
+aaa authorization commands 13 default group tacacs+ none 
+aaa authorization commands 14 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 0 default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 2 default start-stop group tacacs+
+aaa accounting commands 3 default start-stop group tacacs+
+aaa accounting commands 4 default start-stop group tacacs+
+aaa accounting commands 5 default start-stop group tacacs+
+aaa accounting commands 6 default start-stop group tacacs+
+aaa accounting commands 7 default start-stop group tacacs+
+aaa accounting commands 8 default start-stop group tacacs+
+aaa accounting commands 9 default start-stop group tacacs+
+aaa accounting commands 10 default start-stop group tacacs+
+aaa accounting commands 11 default start-stop group tacacs+
+aaa accounting commands 12 default start-stop group tacacs+
+aaa accounting commands 13 default start-stop group tacacs+
+aaa accounting commands 14 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa accounting network default start-stop group tacacs+
+aaa accounting connection default start-stop group tacacs+
+aaa accounting system default start-stop group tacacs+
+aaa session-id common
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# !
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# sh run | sec line vty
+line vty 0 4
+ access-class Secure-VTY in
+ exec-timeout 5 0
+ privilege level 15
+ password 7 095F4B1B1A0A
+ length 0
+ transport input ssh
+line vty 5 15
+ access-class Secure-VTY in
+ exec-timeout 5 0
+ password 7 095F4B1B1A0A
+ transport input ssh
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# !
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# sh run | inc username
+username support privilege 15 secret 5 $1$4NzA$XIC6bwA836L3TYELnwo/M/
+username admin privilege 15 secret 4 MQoZyTYf1rmySAa9K8KOMLzUEeZEUSdnU6bbqirSNuw
+username solarwinds privilege 15 secret 4 j/JwlNmmp/JImp0fSy1ToLbaRDTxnluHiEZVOFvVOTM
+username updata privilege 15 password 7 000010055C0B5B56
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# !
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# sh run | inc access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ip access-list extended Secure-VTY
+ access-class Secure-VTY in
+ access-class Secure-VTY in
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# !
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2#
+DCC-Stan-Rd-Sw2# 
+DCC-Stan-Rd-Sw2#

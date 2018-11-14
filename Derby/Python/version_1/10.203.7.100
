@@ -1,0 +1,110 @@
+
+Ashtree_1st_s2_DCC20049#term len 0
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# !
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^C
+aaa authentication fail-message ^C
+aaa authentication login default group ACS local
+aaa authentication enable default group ACS
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 0 default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 2 default start-stop group tacacs+
+aaa accounting commands 3 default start-stop group tacacs+
+aaa accounting commands 4 default start-stop group tacacs+
+aaa accounting commands 5 default start-stop group tacacs+
+aaa accounting commands 6 default start-stop group tacacs+
+aaa accounting commands 7 default start-stop group tacacs+
+aaa accounting commands 8 default start-stop group tacacs+
+aaa accounting commands 9 default start-stop group tacacs+
+aaa accounting commands 10 default start-stop group tacacs+
+aaa accounting commands 11 default start-stop group tacacs+
+aaa accounting commands 12 default start-stop group tacacs+
+aaa accounting commands 13 default start-stop group tacacs+
+aaa accounting commands 14 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa accounting network default start-stop group tacacs+
+aaa accounting connection default start-stop group tacacs+
+aaa accounting system default start-stop group tacacs+
+aaa session-id common
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# !
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# sh run | sec line vty
+                                  ^
+% Invalid input detected at '^' marker.
+
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# !
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# sh run | inc username
+username support privilege 15 secret 5 $1$MqZP$.8AMwOH7X0hgeQL4HFnhn/
+username admin privilege 15 password 7 072E2F45430815241411581F17
+username solarwinds privilege 15 secret 5 $1$WDeh$lHcVA7PE.dSOP1808ikMU0
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# !
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# sh run | inc access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ switchport mode access
+ip access-list standard Secure-SNMP
+ip access-list extended Secure-VTY
+snmp-server group solarwinds v3 priv access Secure-SNMP
+ access-class Secure-VTY in
+ access-class Secure-VTY in
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# !
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049#
+Ashtree_1st_s2_DCC20049# 
+Ashtree_1st_s2_DCC20049#

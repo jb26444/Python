@@ -1,0 +1,12 @@
+aaa authentication login default group local
+aaa authentication enable default group local
+aaa accounting network default start-stop group local
+aaa accounting connection default start-stop group local
+aaa accounting system default start-stop group local
+aaa authorization exec default group local
+!
+line vty 0 15
+no access-class Secure-VTY in
+password cisco
+!
+username XXXXX priviledge 15 

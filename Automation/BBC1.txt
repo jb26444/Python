@@ -1,0 +1,16 @@
+
+BBC-TURVEY-LOWER-SCHOOL-897VA#term len 0
+BBC-TURVEY-LOWER-SCHOOL-897VA# sh run | sec line vty 
+line vty 0 4
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ privilege level 15
+ login local
+ transport input ssh
+line vty 5 15
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ privilege level 15
+ login local
+ transport input ssh
+BBC-TURVEY-LOWER-SCHOOL-897VA#

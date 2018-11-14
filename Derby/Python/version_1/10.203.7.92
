@@ -1,0 +1,148 @@
+
+Hospital_Node15_S1#term len 0
+Hospital_Node15_S1# 
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# !
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^C
+aaa authentication fail-message ^C
+aaa authentication login default group ACS local
+aaa authentication enable default group ACS
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 2 default group tacacs+ none 
+aaa authorization commands 3 default group tacacs+ none 
+aaa authorization commands 4 default group tacacs+ none 
+aaa authorization commands 5 default group tacacs+ none 
+aaa authorization commands 6 default group tacacs+ none 
+aaa authorization commands 7 default group tacacs+ none 
+aaa authorization commands 8 default group tacacs+ none 
+aaa authorization commands 9 default group tacacs+ none 
+aaa authorization commands 10 default group tacacs+ none 
+aaa authorization commands 11 default group tacacs+ none 
+aaa authorization commands 12 default group tacacs+ none 
+aaa authorization commands 13 default group tacacs+ none 
+aaa authorization commands 14 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 0 default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 2 default start-stop group tacacs+
+aaa accounting commands 3 default start-stop group tacacs+
+aaa accounting commands 4 default start-stop group tacacs+
+aaa accounting commands 5 default start-stop group tacacs+
+aaa accounting commands 6 default start-stop group tacacs+
+aaa accounting commands 7 default start-stop group tacacs+
+aaa accounting commands 8 default start-stop group tacacs+
+aaa accounting commands 9 default start-stop group tacacs+
+aaa accounting commands 10 default start-stop group tacacs+
+aaa accounting commands 11 default start-stop group tacacs+
+aaa accounting commands 12 default start-stop group tacacs+
+aaa accounting commands 13 default start-stop group tacacs+
+aaa accounting commands 14 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa accounting network default start-stop group tacacs+
+aaa accounting connection default start-stop group tacacs+
+aaa accounting system default start-stop group tacacs+
+aaa session-id common
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# !
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# sh run | sec line vty
+                             ^
+% Invalid input detected at '^' marker.
+
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# !
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# sh run | inc username
+username support privilege 15 secret 5 $1$gH94$Hgu.SOMDvq.w2D4IAsnne.
+username dcw-eng privilege 15 secret 5 $1$P5KN$H4bUSaM7UryWOczQK5Yj9/
+username admin privilege 15 password 7 1128170C1A13072D072978373B
+username solarwinds privilege 15 secret 5 $1$1E07$ZSJx1Hrr4TjfgkIOqJm63.
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# !
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# sh run | inc access
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 650
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ switchport access vlan 342
+ip access-list standard Secure-SNMP
+ip access-list extended Secure-VTY
+snmp-server group solarwinds v3 priv access Secure-SNMP
+ access-class Secure-VTY in vrf-also
+ access-class Secure-VTY in vrf-also
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# !
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# 
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# 
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1# 
+Hospital_Node15_S1#
+Hospital_Node15_S1# 
+Hospital_Node15_S1#

@@ -1,0 +1,794 @@
+
+CH-ACC-RD-GF-S-Sw2#term len 0
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# !
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# sh run | inc aaa
+aaa new-model
+aaa group server tacacs+ ACS
+aaa authentication banner ^C
+aaa authentication fail-message ^C
+aaa authentication login default group ACS local
+aaa authentication login CONSOLE none
+aaa authentication enable default group ACS
+aaa authentication dot1x default group radius
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group ACS local 
+aaa authorization commands 0 default group tacacs+ none 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group ACS local 
+aaa authorization network default group radius 
+aaa accounting dot1x default start-stop group radius
+aaa accounting exec default start-stop group tacacs+
+aaa accounting commands 1 default start-stop group tacacs+
+aaa accounting commands 15 default start-stop group tacacs+
+aaa server radius dynamic-author
+aaa session-id common
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# !
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# sh run | sec line vty
+line vty 0 4
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ password 7 01170507035B565F
+ transport input ssh
+line vty 5 15
+ access-class Secure-VTY in vrf-also
+ exec-timeout 5 0
+ password 7 030058085E5F711C
+ transport input ssh
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# !
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# sh run | inc username
+username serco privilege 15 password 7 021501490809
+username support privilege 15 secret 4 sLN8pi887lyYJoD7W/ayKVRQXRxHUI81WrwQwoz1.mE
+username solarwinds privilege 15 secret 4 igE4CJM8qLhA/7lCgu/M46V.NhjcTVbsZO3wBW25pwQ
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# !
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# sh run | inc access
+  match access-group name AUTOQOS-ACL-DEFAULT
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2104
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport access vlan 2080
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2104
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2104
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ switchport access vlan 2080
+ switchport mode access
+ ip access-group AUTH-DEFAULT-ACL in
+ ip access-group STOP-ACCESS-VLAN2080 in
+ip access-list standard Secure-SNMP
+ip access-list extended AUTH-DEFAULT-ACL
+ip access-list extended AUTOQOS-ACL-DEFAULT
+ip access-list extended STOP-ACCESS-VLAN2080
+ip access-list extended Secure-VTY
+ip access-list extended redirect
+snmp-server group solarwinds v3 priv access Secure-SNMP
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+ access-class Secure-VTY in vrf-also
+ access-class Secure-VTY in vrf-also
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# !
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2#
+CH-ACC-RD-GF-S-Sw2# 
+CH-ACC-RD-GF-S-Sw2#
